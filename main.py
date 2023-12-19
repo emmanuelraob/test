@@ -1,13 +1,12 @@
 import pygame
 import time 
 
-from Ants.kingdom import kingdom
-from global_use.vec2 import Vec2
-
+from Ants.kingdom import Kingdom
 
 # Colores y variables
 BLACK = (31, 30, 26)
 KINGDOM_AMOUNT = 3
+
 
 
 def draw_window(kingdoms, screen):
@@ -27,7 +26,11 @@ def run_simulation():
     width, height = 800, 600
     screen = pygame.display.set_mode((width, height))
     
-    kingdoms = {kingdom(screen,1) for _ in range (KINGDOM_AMOUNT)}
+    
+    kingdoms = []
+    for i in range(KINGDOM_AMOUNT):
+        kingdoms.append(Kingdom(screen,i,1))
+
 
     last_time = time.perf_counter()
     frame_count = 0

@@ -17,7 +17,7 @@ class State (Enum):
 
 
 class Ant_colony:
-    def __init__(self, screen, color):
+    def __init__(self, screen, kikgdom_id):
 
         #state
         self.colony_state = State.NEUTRAL
@@ -37,12 +37,9 @@ class Ant_colony:
         self.max_worker_ant_amount = int(self.ant_amout*7/10)
         self.out_worker_ant_amount = int(self.max_worker_ant_amount/2)
         self.in_worker_ant_amount = int(self.max_worker_ant_amount/2)
-        self.soldiers = {Soldier_ant(self.position,color) for _ in range(self.soldier_ant_amount)}
-        self.in_workers = {Worker_ant(self.position,color) for _ in range(self.in_worker_ant_amount)}
-        self.out_workers = {Worker_ant(self.position,color) for _ in range(self.out_worker_ant_amount)}
-
-
-        
+        self.soldiers = {Soldier_ant(self.position,kikgdom_id) for _ in range(self.soldier_ant_amount)}
+        self.in_workers = {Worker_ant(self.position,kikgdom_id) for _ in range(self.in_worker_ant_amount)}
+        self.out_workers = {Worker_ant(self.position,kikgdom_id) for _ in range(self.out_worker_ant_amount)}
 
         #food and enemy known areas 
         self.food_areas = []
