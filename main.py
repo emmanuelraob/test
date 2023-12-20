@@ -3,9 +3,10 @@ import time
 
 from Ants.kingdom import Kingdom
 
-# Colores y variables
+#Variables
 BLACK = (31, 30, 26)
-KINGDOM_AMOUNT = 3
+KINGDOM_AMOUNT = 1
+WIDTH, HEIGHT = 1000, 700
 
 
 
@@ -23,8 +24,7 @@ def action(kingdoms, screen,delta_time):
 
 def run_simulation():
     pygame.init()
-    width, height = 800, 600
-    screen = pygame.display.set_mode((width, height))
+    screen = pygame.display.set_mode((WIDTH, HEIGHT))
     
     
     kingdoms = []
