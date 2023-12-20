@@ -33,13 +33,15 @@ class Ant_colony:
         #Ants
         self.max_ant_amout = 10
         self.ant_amout = 7
+        self.ant_generation = 1
         self.soldier_ant_amount = int(self.ant_amout*3/10)
         self.max_worker_ant_amount = int(self.ant_amout*7/10)
         self.out_worker_ant_amount = int(self.max_worker_ant_amount/2)
         self.in_worker_ant_amount = int(self.max_worker_ant_amount/2)
-        self.soldiers = {Soldier_ant(self.position,kikgdom_id) for _ in range(self.soldier_ant_amount)}
-        self.in_workers = {Worker_ant(self.position,kikgdom_id) for _ in range(self.in_worker_ant_amount)}
-        self.out_workers = {Worker_ant(self.position,kikgdom_id) for _ in range(self.out_worker_ant_amount)}
+        self.soldiers = {Soldier_ant(self.position,kikgdom_id,self.ant_generation) for _ in range(self.soldier_ant_amount)}
+        self.in_workers = {Worker_ant(self.position,kikgdom_id,self.ant_generation) for _ in range(self.in_worker_ant_amount)}
+        self.out_workers = {Worker_ant(self.position,kikgdom_id,self.ant_generation) for _ in range(self.out_worker_ant_amount)}
+        
 
         #food and enemy known areas 
         self.food_areas = []
@@ -74,6 +76,9 @@ class Ant_colony:
     def every_second_ant_colony_work(self, screen):
         #verificar el rate de conversion de comida dependiendo de la cantidad maxima de comida consumible
         pass
+
+    def every_week_ant_colony_work(self):
+        self.ant_generation += 1
 
     def verificate_state(self, screen):
         pass

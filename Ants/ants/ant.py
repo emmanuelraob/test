@@ -1,8 +1,15 @@
 import random 
 import pygame
 import math
+from enum import Enum
 
 from global_use.vec2 import Vec2
+
+class State (Enum):
+    LOOKING_FOR_FOOD = 0
+    EATING = 1
+    
+
 
 class Ant:
     def __init__(self, position):
@@ -24,7 +31,7 @@ class Ant:
         self.load = 0   
         self.max_load = 0  
         
-        #attackand life
+        #attack and life
         self.attack_damage = 0  
         self.life = 0   
         self.max_life = 0  
@@ -32,7 +39,7 @@ class Ant:
         self.max_age = 0  
 
         #states and caracteristics 
-        self.state = 0  
+        self.state = State.LOOKING_FOR_FOOD  
         self.generation = 0  
         self.color = (255,255,255)
         self.radious = 1
