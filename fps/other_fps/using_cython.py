@@ -29,7 +29,7 @@ import ball  # Asegúrate de que este módulo esté compilado y disponible
 
 # Configuraciones iniciales
 width, height = 800, 600
-max_balls = 1000
+max_balls = 10000
 ball_radius = 1/width * 2
 speed = 1/width * 3
 
