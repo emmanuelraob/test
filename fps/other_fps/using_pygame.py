@@ -14,8 +14,8 @@ BLACK = (0, 0, 0)
 
 # Configuraciones de las bolas
 max_balls = 10000
-ball_radius = 20
-speed = 300  # Velocidad en píxeles por segundo
+ball_radius = 1
+speed = 3  # Velocidad en píxeles por segundo
 
 # Clase para las bolas
 class Ball:

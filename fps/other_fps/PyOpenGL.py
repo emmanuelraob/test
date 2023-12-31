@@ -8,7 +8,7 @@ import math
 
 # Configuraciones iniciales
 width, height = 800, 600
-max_balls = 10000
+max_balls = 1000
 ball_radius = 0.002
 speed = 0.01
 
