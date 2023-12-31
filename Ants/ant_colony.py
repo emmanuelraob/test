@@ -31,8 +31,8 @@ class Ant_colony:
         self.rate_food_convertion = 0 #rate per second
 
         #Ants
-        self.max_ant_amout = 10
-        self.ant_amout = 7
+        self.max_ant_amout = 100000
+        self.ant_amout = 10000
         self.ant_generation = 1
         self.soldier_ant_amount = int(self.ant_amout*3/10)
         self.max_worker_ant_amount = int(self.ant_amout*7/10)
