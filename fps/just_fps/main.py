@@ -68,6 +68,6 @@ while running:
     pygame.display.set_caption(f"FPS: {fps:.2f}")
 
     pygame.display.flip()
-    pygame.time.wait(10)
+    pygame.time.wait(1)
 
 pygame.quit()
